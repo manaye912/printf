@@ -26,7 +26,7 @@ int _printf(const char *format, ...)
 			{
 				if (format[i + 1] == '%')
 				{
-					count += _putchar(format[i]);
+					count += putchar(format[i]);
 					i += 2;
 				}
 				else
@@ -35,13 +35,13 @@ int _printf(const char *format, ...)
 					if (m)
 						count += m(args);
 					else
-						count = _putchar(format[i]) + _putchar(format[i + 1]);
+						count = putchar(format[i]) + putchar(format[i + 1]);
 					i += 2;
 				}
 			}
 			else
 			{
-				count += _putchar(format[i]);
+				count += putchar(format[i]);
 				i++;
 			}
 		}
