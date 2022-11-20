@@ -9,5 +9,6 @@ int _printf(const char *format, ...);
 * Return: return a function
 **/
 int (*get_func(char s))(va_list);
+int binary(va_list va);
 
 #endif
