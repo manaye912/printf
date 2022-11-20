@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "main.h"
+#include <string.h>
 /**
  * _printf - recreates the printf function
  * @format: string with format specifier
@@ -25,7 +26,7 @@ int _printf(const char *format, ...)
 			{
 				if (format[i + 1] == '%')
 				{
-					count += va_arg(format[i]);
+					count += _putchar(format[i]);
 					i += 2;
 				}
 				else
@@ -34,13 +35,13 @@ int _printf(const char *format, ...)
 					if (m)
 						count += m(args);
 					else
-						count = va_arg(format[i]) + va_arg(format[i + 1]);
+						count = _putchar(format[i]) + _putchar(format[i + 1]);
 					i += 2;
 				}
 			}
 			else
 			{
-				count += va_arg(format[i]);
+				count += _putchar(format[i]);
 				i++;
 			}
 		}
