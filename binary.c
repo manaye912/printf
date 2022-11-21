@@ -11,8 +11,8 @@
 int binary(va_list va)
 {
 	unsigned int c;
-	int  i, j;
-	int arr[100];
+	unsigned int  i, j;
+	unsigned int arr[100];
 
 	c = va_arg(va, int);
 	i = 0;
